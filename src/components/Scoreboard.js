@@ -52,6 +52,11 @@ export default class Scoreboard extends Component {
         )
         this.setState({ players: updatedPlayers })
     }
+
+    deletePlayer = (id) => {
+        const updatedPlayers = this.state.players.filter(player => player.id !== id);
+        this.setState({ players: updatedPlayers })
+    }
   
     renderPlayer = (player) => {
       return (
@@ -61,6 +66,7 @@ export default class Scoreboard extends Component {
           score={player.score}
           key={player.id}
           updatePlayerScore={this.updatePlayerScore}
+          deletePlayer={this.deletePlayer}
         />
       )
     }

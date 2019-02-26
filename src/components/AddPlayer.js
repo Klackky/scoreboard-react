@@ -11,7 +11,14 @@ export default class AddPlayer extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        if (this.state.name.length > 2) {
         this.props.addPlayer(this.state.name)
+        this.setState({
+            name : ''
+        });
+        } else {
+            alert(`name should be at least two characters long`);
+        }
       }
 
       handleChange = (event) => {
