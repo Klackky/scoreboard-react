@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './Button.css'
+import './DeleteButton.css'
 
 export default class DeleteButton extends Component {
     static propTypes = {
@@ -9,7 +9,7 @@ export default class DeleteButton extends Component {
 
   render() {
     return (
-        <button className="delete-button" onClick={this.props.onClick}>delete</button>
+        <button className="delete-button" onClick={this.props.onClick}>delete player</button>
     )
   }
 }
